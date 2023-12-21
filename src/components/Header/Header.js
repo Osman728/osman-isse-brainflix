@@ -1,6 +1,7 @@
 import brainFlixLogo from "../../assets/images/BrainFlix-logo.svg"
 import profilePicture from "../../assets/images/Mohan-muruge.jpg"
 import "./Header.scss";
+
 const Header = () => {
     return (
       <header className="header">
