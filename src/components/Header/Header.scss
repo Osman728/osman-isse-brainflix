@@ -1,0 +1,57 @@
+@use "../../styles/partials/resets" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+.header {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+  &__logo {
+    margin: 1rem auto;
+    height: 25px;
+    width: 120px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__searchbar {
+    background-image: url("../../assets//images/search.svg");
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
+    width: 80%;
+    font-size: 1rem;
+    padding: 1rem 1rem 1rem 2.75rem;
+    border-radius: 0.25rem;
+    border: 0.1rem solid #e1e1e1;
+    background-color:$secondarycolor-4;
+    margin-bottom: 1.2rem;
+    color: $secondarycolor-1;
+    height: 2.5rem;
+  }
+
+  &__avartar {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+  }
+  &__button {
+    background-image: url("../../assets//images/upload.svg");
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
+    margin-top: 4px;
+    height: 40px;
+    border-radius: 4px;
+    width: 100%;
+    background-color: $primarycolor-2;
+    color: $primarycolor-4;
+    border: 2px solid $primarycolor-2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    &:hover {
+        border-color:$secondarycolor-2 ;
+      background-color: $secondarycolor-2;
+      color: $primarycolor-4;
+    }
+  }
+}
