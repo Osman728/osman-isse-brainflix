@@ -1,4 +1,4 @@
-
+import "./VideoDescription.scss";
 import views from '../../assets/images/views.svg';
 import likes from '../../assets/images/likes.svg';
 
@@ -14,7 +14,7 @@ const VideoDescription = ({ selectedVideo }) => {
       <h1 className="videoInfo__title">{selectedVideo.title}</h1>
       <div className="videoInfo__details">
         <div className="videoInfo__left-container">
-          <p className="videoInfo__author">{selectedVideo.channel}</p>
+          <p className="videoInfo__author">By {selectedVideo.channel}</p>
           <p className="videoInfo__date">{formattedDate}</p>
         </div>
 
@@ -30,6 +30,7 @@ const VideoDescription = ({ selectedVideo }) => {
           </div>
         </div>
       </div>
+      <p className="videoInfo__description">{selectedVideo.description}</p>
     </div>
   );
 };
