@@ -76,13 +76,13 @@
     resize: none;
     overflow-y: hidden;
     overflow: hidden;
-    color: $primarycolor-1;
     border: 1px solid $secondarycolor-3;
     &::placeholder {
       font-family: "Avenir";
       line-height: 1.125rem;
       font-weight: 400;
       font-size: 0.8125rem;
+      color: $primarycolor-1;
     }
     @include tablet {
       height: 2.45rem;
