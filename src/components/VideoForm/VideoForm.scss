@@ -3,33 +3,56 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typograph" as *;
 
-.conversation{
-   &__title{
+.conversation {
+  &__title {
     font-weight: 700;
     font-size: 0.812rem;
     line-height: 1.125rem;
     padding: 0 1rem 1rem 1rem;
-   } 
-   &__container{
+    @include tablet {
+      padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
+  }
+  &__container {
     display: flex;
-    flex-direction:row;
-    padding:0 1rem;
-   }
-   &__profile-image {
-    margin:1.1rem 1rem 0 0;
+    flex-direction: row;
+    padding: 0 1rem;
+    @include tablet {
+      padding: 0 1.5rem;
+    }
+  }
+  &__profile-image {
+    margin: 1.1rem 1rem 0 0;
     object-fit: cover;
     border-radius: 50%;
     width: 2.25rem;
     height: 2.25rem;
-   }
-&__form{
-  width: 100%;
-}
+    @include tablet {
+      margin: 1.5rem 1rem 0 0;
+      object-fit: cover;
+      border-radius: 50%;
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+  }
+  &__form {
+    width: 100%;
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
   &__comment {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    
+    @include tablet {
+      flex: 1;
+      max-width: 70%;
+    }
   }
 
   &__comment-label {
@@ -38,26 +61,45 @@
     margin-bottom: 0.25rem;
     color: $primarycolor-3;
     line-height: 1.25rem;
+    @include tablet {
+      font-size: 0.75rem;
+    }
   }
   &__comment-text {
     width: 100%;
     outline: none;
     background-color: $secondarycolor-4;
     border-radius: 0.25rem;
-    height: 5.25rem;
-    padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+    height: 2.25rem;
+    padding: 0.75rem;
     margin-bottom: 1rem;
     resize: none;
+    overflow-y: hidden;
+    overflow: hidden;
     color: $primarycolor-1;
+    border: 1px solid $secondarycolor-3;
     &::placeholder {
       font-family: "Avenir";
       line-height: 1.125rem;
       font-weight: 400;
       font-size: 0.8125rem;
     }
+    @include tablet {
+      height: 2.45rem;
+      width: 357%;
+      max-width: 100%;
+      font-size: 0.875rem;
+      line-height: 1.5714rem;
+    }
   }
+  &__comment-text {
+    border: 1px solid $secondarycolor-3;
 
-&__button{
+    &:active {
+      border: 1px solid $secondarycolor-2;
+    }
+  }
+  &__button {
     background-image: url(../../assets/images/add_comment.svg);
     background-repeat: no-repeat;
     background-position: left 1rem center;
@@ -65,9 +107,9 @@
     height: 40px;
     border-radius: 4px;
     width: 100%;
-    background-color: #0095FF;
+    background-color: #0095ff;
     color: #ffffff;
-    border: 2px solid #0095FF;
+    border: 2px solid #0095ff;
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 0.63rem;
@@ -75,10 +117,17 @@
     margin-bottom: 0.25rem;
     line-height: 1.25rem;
     &:hover {
-      border-color:$secondarycolor-2 ;
-    background-color: $secondarycolor-2;
-    color: $primarycolor-4;
+      border-color: $secondarycolor-2;
+      background-color: $secondarycolor-2;
+      color: $primarycolor-4;
+    }
+    @include tablet {
+      font-size: 0.75rem;
+      margin: 0.5rem 0 0 0;
+      background-position: left 0.2rem center;
+      height: 2.5rem;
+      width: 9.375rem;
+      padding: 0 2rem;
+    }
   }
-}
-
 }
