@@ -1,0 +1,64 @@
+@use "../../styles/partials/resets";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typograph" as *;
+
+.conversation{
+   &__title{
+    font-weight: 700;
+    padding: 0 1rem 1rem 1rem;
+   } 
+   &__container{
+    display: flex;
+    flex-direction:row;
+    padding:0 1rem;
+   }
+   &__profile-image {
+    margin:1.1rem 1rem 0 0;
+    object-fit: cover;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+   }
+
+  &__comment {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  &__comment-label {
+    font-size: 0.7rem;
+    font-weight: 400;
+    margin-bottom: 4px;
+    color: $primarycolor-3;
+  }
+  &__comment-text {
+    width: 147%;
+    outline: none;
+    background-color: $secondarycolor-4;
+    border-radius: 4px;
+    height: 5.25rem;
+    padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+    margin-bottom: 1rem;
+    resize: none;
+    color: $primarycolor-1;
+   
+  }
+&__button{
+    background-image: url(../../assets/images/add_comment.svg);
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
+    margin-top: 4px;
+    height: 40px;
+    border-radius: 4px;
+    width: 147%;
+    background-color: #0095FF;
+    color: #ffffff;
+    border: 2px solid #0095FF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+}
