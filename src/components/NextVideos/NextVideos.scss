@@ -1,0 +1,51 @@
+@use "../../styles/partials/resets";
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typograph" as *;
+
+.nextvideo {
+  display: flex;
+  padding: 0rem 1rem 1rem 1rem;
+  gap: 1rem;
+
+  &__header {
+    padding: 0rem 1rem 1.5rem 1rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    color: $primarycolor-3;
+  }
+
+  &__title {
+    padding: 0rem 1rem 1.5rem 1rem;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-weight: 700;
+    color: $primarycolor-3;
+  }
+
+  &__image {
+    border-radius: 0.25rem;
+    max-width: 6.875rem;
+    max-height: 4.125rem;
+    aspect-ratio: 16/9;
+    background-color: $secondarycolor-3;
+    object-fit: cover;
+    object-position: 0% 30%;
+  }
+
+  &__info-title {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 700;
+    color: $primarycolor-1;
+    padding-bottom: 0.5rem;
+  }
+
+  &__info-author {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    color: $primarycolor-1;
+  }
+}
