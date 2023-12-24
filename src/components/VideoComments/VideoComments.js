@@ -1,10 +1,12 @@
 import "./VideoComments.scss";
 const VideoComments = ({ selectedVideo }) => {
   return (
-    <div className="comment">
+    <section className="comment">
       {selectedVideo.comments.map((comment) => {
         const dateFormat = new Date(comment.timestamp);
-        const formattedMonth = (dateFormat.getMonth() + 1).toString().padStart(2, "0");
+        const formattedMonth = (dateFormat.getMonth() + 1)
+          .toString()
+          .padStart(2, "0");
         const formattedDay = dateFormat.getDate().toString().padStart(2, "0");
         const formattedYear = dateFormat.getFullYear();
         const formattedDate = `${formattedMonth}/${formattedDay}/${formattedYear}`;
@@ -24,7 +26,7 @@ const VideoComments = ({ selectedVideo }) => {
           </article>
         );
       })}
-    </div>
+    </section>
   );
 };
 

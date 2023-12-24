@@ -17,16 +17,16 @@ const VideoForm = ({ selectedVideo }) => {
 
         <form className="conversation__form">
           <div className="conversation__comment">
-            <label className="conversation__comment-label">JOIN THE CONVERSATION</label>
+            <label className="conversation__comment-label">
+              JOIN THE CONVERSATION
+            </label>
             <textarea
               className="conversation__comment-text"
               name="comment"
               placeholder="Add a new comment"
             ></textarea>
           </div>
-          <button className="conversation__button">
-            COMMENT
-          </button>
+          <button className="conversation__button">COMMENT</button>
         </form>
       </div>
     </section>

@@ -2,11 +2,14 @@ import "./Video.scss";
 
 const Video = ({ selectedVideo }) => {
   return (
-    <div className='video'>
-    <video className='video__player' poster={selectedVideo.image}controls></video>
+    <section className="video">
+      <video
+        className="video__player"
+        poster={selectedVideo.image}
+        controls
+      ></video>
+    </section>
+  );
+};
 
-    </div>
-  )
-} 
-
-export default Video
+export default Video;

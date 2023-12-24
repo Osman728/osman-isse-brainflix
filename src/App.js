@@ -15,21 +15,34 @@ function App() {
   const [videoList, setVideoList] = useState(videoSideBar);
 
   const handleFilmClick = (clickedVideo) => {
-    const videoMatch = video.find((videoMatch) => videoMatch.id === clickedVideo.id);
+    const videoMatch = video.find(
+      (videoMatch) => videoMatch.id === clickedVideo.id
+    );
     if (videoMatch) {
       setSelectedVideo(videoMatch);
     }
   };
 
-  const filteredVideoList = videoList.filter((v) => v.id !== selectedVideo.id);
+  const filteredVideoList = videoList.filter(
+    (video) => video.id !== selectedVideo.id
+  );
   return (
     <>
       <Header />
       <Video selectedVideo={selectedVideo} />
-      <VideoDescription selectedVideo={selectedVideo} />
-      <VideoForm selectedVideo={selectedVideo} />
-      <VideoComments selectedVideo={selectedVideo} />
-      <NextVideos videoSideBar={filteredVideoList} handleFilmClick={handleFilmClick} />
+      <main className="columnContainer">
+        <div className="columnContent">
+          <VideoDescription selectedVideo={selectedVideo} />
+          <VideoForm selectedVideo={selectedVideo} />
+          <VideoComments selectedVideo={selectedVideo} />
+        </div>
+        <aside className="relatedVideos">
+          <NextVideos
+            videoSideBar={filteredVideoList}
+            handleFilmClick={handleFilmClick}
+          />
+        </aside>
+      </main>
     </>
   );
 }
