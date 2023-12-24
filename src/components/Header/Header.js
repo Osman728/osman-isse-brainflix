@@ -1,4 +1,3 @@
-// Header.jsx
 import React from "react";
 import brainFlixLogo from "../../assets/images/BrainFlix-logo.svg";
 import profilePicture from "../../assets/images/Mohan-muruge.jpg";
