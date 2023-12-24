@@ -6,6 +6,8 @@
 .conversation{
    &__title{
     font-weight: 700;
+    font-size: 0.812rem;
+    line-height: 1.125rem;
     padding: 0 1rem 1rem 1rem;
    } 
    &__container{
@@ -17,10 +19,12 @@
     margin:1.1rem 1rem 0 0;
     object-fit: cover;
     border-radius: 50%;
-    width: 36px;
-    height: 36px;
+    width: 2.25rem;
+    height: 2.25rem;
    }
-
+&__form{
+  width: 100%;
+}
   &__comment {
     display: flex;
     flex-direction: column;
@@ -29,36 +33,52 @@
   }
 
   &__comment-label {
-    font-size: 0.7rem;
-    font-weight: 400;
-    margin-bottom: 4px;
+    font-size: 0.63rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
     color: $primarycolor-3;
+    line-height: 1.25rem;
   }
   &__comment-text {
-    width: 147%;
+    width: 100%;
     outline: none;
     background-color: $secondarycolor-4;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     height: 5.25rem;
     padding: 0.75rem 0.75rem 0.75rem 0.75rem;
     margin-bottom: 1rem;
     resize: none;
     color: $primarycolor-1;
-   
+    &::placeholder {
+      font-family: "Avenir";
+      line-height: 1.125rem;
+      font-weight: 400;
+      font-size: 0.8125rem;
+    }
   }
+
 &__button{
     background-image: url(../../assets/images/add_comment.svg);
     background-repeat: no-repeat;
     background-position: left 1rem center;
-    margin-top: 4px;
+    margin-top: 0.25rem;
     height: 40px;
     border-radius: 4px;
-    width: 147%;
+    width: 100%;
     background-color: #0095FF;
     color: #ffffff;
     border: 2px solid #0095FF;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 0.63rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    line-height: 1.25rem;
+    &:hover {
+      border-color:$secondarycolor-2 ;
+    background-color: $secondarycolor-2;
+    color: $primarycolor-4;
+  }
 }
 
 }
