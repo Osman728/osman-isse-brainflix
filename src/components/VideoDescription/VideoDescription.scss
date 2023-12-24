@@ -8,14 +8,16 @@
   flex-direction: column;
 
   &__title {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding: 1.5rem 1rem 1rem 1rem;
     color: $primarycolor-1;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
+    @include tablet {
+      padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+      font-size: 2.0625rem;
+      line-height: 2.75rem;
+    }
   }
 
   &__details {
@@ -24,14 +26,23 @@
     border-bottom: 0.5px solid $secondarycolor-3;
     padding-top: 1.5rem;
     padding-bottom: 1rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin: 0 1rem;
     justify-content: space-between;
+    @include tablet {
+      border-top: none;
+      padding: 0;
+      margin: 0 1.5rem;
+    }
   }
 
   &__left-container {
     display: flex;
     flex-direction: column;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      gap: 1.5rem;
+    }
   }
 
   &__right-container {
@@ -42,12 +53,24 @@
     font-weight: 400;
     font-size: 0.812rem;
     line-height: 1.125rem;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      padding-right: 0;
+      align-items: flex-start;
+      gap: 2.5rem;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
   }
 
   &__view-container,
   &__like-container {
     display: flex;
     justify-content: space-around;
+    @include tablet {
+      gap: 0.5rem;
+    }
   }
 
   &__view-container {
@@ -63,6 +86,10 @@
     font-weight: 700;
     font-size: 0.812rem;
     line-height: 1.125rem;
+    @include tablet {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
   }
 
   &__date {
@@ -70,6 +97,10 @@
     font-weight: 400;
     font-size: 0.812rem;
     line-height: 1.125rem;
+    @include tablet {
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
   }
 
   &__description {
@@ -80,5 +111,10 @@
     line-height: 1.125rem;
     font-weight: 400;
     font-size: 0.8125rem;
+    @include tablet {
+      padding: 1rem 1.5rem 1.5rem 1.5rem;
+      font-size: 0.875rem;
+      line-height: 1.375rem;
+    }
   }
 }
