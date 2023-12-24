@@ -10,27 +10,27 @@ const VideoDescription = ({ selectedVideo }) => {
   const formattedYear = dateFormat.getFullYear();
   const formattedDate = `${formattedMonth}/${formattedDay}/${formattedYear}`;
   return (
-    <div className="videoInfo">
-      <h1 className="videoInfo__title">{selectedVideo.title}</h1>
-      <div className="videoInfo__details">
-        <div className="videoInfo__left-container">
-          <p className="videoInfo__author">By {selectedVideo.channel}</p>
-          <p className="videoInfo__date">{formattedDate}</p>
+    <div className="videoinfo">
+      <h1 className="videoinfo__title">{selectedVideo.title}</h1>
+      <div className="videoinfo__details">
+        <div className="videoinfo__left-container">
+          <p className="videoinfo__author">By {selectedVideo.channel}</p>
+          <p className="videoinfo__date">{formattedDate}</p>
         </div>
 
-        <div className="videoInfo__right-container">
-          <div className="videoInfo__view-container">
-            <img className="videoInfo__view-icon" src={views} alt="Image views" />
-            <p className="videoInfo__views">{selectedVideo.views}</p>
+        <div className="videoinfo__right-container">
+          <div className="videoinfo__view-container">
+            <img className="videoinfo__view-icon" src={views} alt="Image views" />
+            <p className="videoinfo__views">{selectedVideo.views}</p>
           </div>
 
-          <div className="videoInfo__like-container">
-            <img className="videoInfo__like-icon" src={likes} alt="Image likes" />
-            <p className="videoInfo__likes">{selectedVideo.likes}</p>
+          <div className="videoinfo__like-container">
+            <img className="videoinfo__like-icon" src={likes} alt="Image likes" />
+            <p className="videoinfo__likes">{selectedVideo.likes}</p>
           </div>
         </div>
       </div>
-      <p className="videoInfo__description">{selectedVideo.description}</p>
+      <p className="videoinfo__description">{selectedVideo.description}</p>
     </div>
   );
 };

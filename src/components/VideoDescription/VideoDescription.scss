@@ -3,57 +3,80 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typograph" as *;
 
-.videoInfo {
+.videoinfo {
   display: flex;
   flex-direction: column;
 
   &__title {
-    padding: 1rem 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     color: $primarycolor-1;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
   }
+
   &__details {
     display: flex;
     border-top: 0.5px solid $secondarycolor-3;
-    border-bottom: 0.5px solid$secondarycolor-3;
-    padding: 1.5rem 0 1rem 0;
-    margin: 0 1rem;
+    border-bottom: 0.5px solid $secondarycolor-3;
+    padding-top: 1.5rem;
+    padding-bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
     justify-content: space-between;
   }
+
   &__left-container {
     display: flex;
     flex-direction: column;
   }
+
   &__right-container {
     color: $primarycolor-3;
     display: flex;
     flex-direction: column;
     padding-right: 3.8rem;
+    font-weight: 400;
+    font-size: 0.812rem;
+    line-height: 1.125rem;
   }
-  &__view-container {
-    width: 125%;
-    display: flex;
-    justify-content: space-around;
-  }
+
+  &__view-container,
   &__like-container {
     display: flex;
     justify-content: space-around;
   }
-  &__author {
-    font-weight: 400;
-  }
-  &__date {
-    color: $primarycolor-3;
+
+  &__view-container {
+    width: 125%;
   }
 
   &__author,
   &__view-container {
     padding-bottom: 1rem;
   }
+
+  &__author {
+    font-weight: 700;
+    font-size: 0.812rem;
+    line-height: 1.125rem;
+  }
+
+  &__date {
+    color: $primarycolor-3;
+    font-weight: 400;
+    font-size: 0.812rem;
+    line-height: 1.125rem;
+  }
+
   &__description {
-    padding: 1rem 1rem 1.5rem 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     line-height: 1.125rem;
     font-weight: 400;
     font-size: 0.8125rem;
