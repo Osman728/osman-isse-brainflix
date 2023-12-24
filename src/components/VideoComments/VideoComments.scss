@@ -4,50 +4,54 @@
 @use "../../styles/partials/typograph" as *;
 
 .comment {
-    padding: 1.5rem 1rem 1rem 1rem;
-   
-  
-    &__section {
-      display: flex;
-      flex-direction: row;
-      padding: 1.5rem 0 1rem 0;
-      border-top: 0.5px solid $secondarycolor-3;
-      border-bottom: 0.5px solid$secondarycolor-3;
-      
-    }
-    &__avartar {
-    padding-right: 1rem;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background-color: $secondarycolor-3;
-    }
-    &__container {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-  
-    &__info {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
-  
-    &__info-name {
-      font-weight: 400;
-      color: $primarycolor-1;
-    
-    }
-    &__info-date {
-      color: $primarycolor-3; 
-    }
-    &__usertext {
-      padding-top: 1rem;
-     
-    }
-    &__usertext-post {
-    
-    }
+  padding: 1.5rem 1rem 1rem 1rem;
+
+  &__section {
+    gap: 1rem;
+    display: flex;
+    flex-direction: row;
+    padding: 1.5rem 0 1rem 0;
+    border-top: 0.5px solid $secondarycolor-3;
+    border-bottom: 0.5px solid$secondarycolor-3;
   }
+  &__avartar {
+    object-fit: cover;
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+    background-color: $secondarycolor-3;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__info-name {
+    font-weight: 700;
+    color: $primarycolor-1;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+  }
+  &__info-date {
+    color: $primarycolor-3;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+  }
+  &__usertext {
+    padding-top: 1rem;
+  }
+  &__usertext-post {
+    font-weight: 400;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+  }
+}
