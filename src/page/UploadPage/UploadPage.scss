@@ -4,23 +4,45 @@
 @use "../../styles/partials/variables" as *;
 
 .upload {
- 
+  border-top: 1px solid $secondarycolor-3;
+  margin-top: 1rem;
+
   &__title {
     padding: 1.5rem 1rem 1rem 1rem;
     color: $primarycolor-1;
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
+
     @include tablet {
-      padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+      padding: 2.25rem 0 1.5rem 0;
       font-size: 2.0625rem;
       line-height: 2.75rem;
+      border-bottom: 1px solid $secondarycolor-3;
+      margin: 0 1.5rem;
+    }
+
+    @include desktop {
+      max-width: 1020px;
+      margin: 0 auto;
     }
   }
+
   &__form {
     padding: 0 1rem;
+
+    @include tablet {
+      padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+    }
+
+    @include desktop {
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 2.25rem 0 1.5rem 0;
+    }
   }
-  &__form--label{
+
+  &__form-label {
     font-size: 0.63rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
@@ -28,24 +50,41 @@
     line-height: 1.25rem;
   }
 
-  &__form--thumbnail {
+  &__form-thumbnail {
     width: 100%;
     height: 100%;
-    margin: 0;
+    padding-bottom: 1.5rem;
+
+    @include tablet {
+      display: block;
+      width: 50%;
+      border-radius: 4px;
+    }
   }
 
-  &__container--label{
+  &__container-label {
     font-size: 0.63rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
     color: $primarycolor-3;
     line-height: 1.25rem;
   }
-&__container{
-  display:flex;
-  flex-direction: column;
-}
-  &__container--title{
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+      border-bottom: 1px solid $secondarycolor-3;
+    }
+
+    @include desktop {
+      border-bottom: none;
+      display: block;
+    }
+  }
+
+  &__container-title {
     width: 100%;
     outline: none;
     background-color: $secondarycolor-4;
@@ -57,15 +96,17 @@
     overflow-y: hidden;
     overflow: hidden;
     border: 1px solid $secondarycolor-3;
+
     &::placeholder {
       font-family: "Avenir";
       line-height: 1.125rem;
       font-weight: 400;
       font-size: 0.812rem;
       color: $primarycolor-1;
+    }
   }
-}
-  &__container--text{
+
+  &__container-text {
     width: 100%;
     outline: none;
     background-color: $secondarycolor-4;
@@ -77,61 +118,90 @@
     overflow-y: hidden;
     overflow: hidden;
     border: 1px solid $secondarycolor-3;
+
     &::placeholder {
       font-family: "Avenir";
       line-height: 1.125rem;
       font-weight: 400;
       font-size: 0.812rem;
       color: $primarycolor-1;
+    }
+
+    @include desktop {
+      height: 7.25rem;
+    }
+  }
+
+  &__button {
+    @include tablet {
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: row-reverse;
+      width: 40%;
+      margin-left: auto;
+    }
+  }
+
+  &__button-publish {
+    background-image: url(../../assets/images/publish.svg);
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
+    margin-top: 0.25rem;
+    height: 40px;
+    border-radius: 4px;
+    width: 100%;
+    background-color: $primarycolor-2;
+    color: $primarycolor-4;
+    border: 2px solid $primarycolor-2;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.63rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    line-height: 1.25rem;
+
+    &:hover {
+      border-color: $secondarycolor-2;
+      background-color: $secondarycolor-2;
+      color: $primarycolor-4;
+    }
+    @include tablet {
+      display: block;
+      width: 50%;
+      border-radius: 4px;
+      font-size: 0.75rem;
+      margin: 0.5rem 0 0 0;
+      background-position: left 0.2rem center;
+      height: 2.5rem;
+      width: 9.375rem;
+      padding: 0 2rem;
+    }
+  }
+
+  &__button-cancel {
+    background-repeat: no-repeat;
+    background-position: left 1rem center;
+    margin-top: 0.25rem;
+    height: 40px;
+    border-radius: 4px;
+    width: 100%;
+    background-color: $primarycolor-4;
+    color: $primarycolor-2;
+    border: 2px solid $primarycolor-4;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 0.63rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    line-height: 1.25rem;
+  }
+
+  &__content {
+    @include desktop {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid $secondarycolor-3;
+      padding-bottom: 1.5rem;
+    }
   }
 }
-
-
-&__button--publish
-{
-  
-  background-image: url(../../assets/images/publish.svg);
-  background-repeat: no-repeat;
-  background-position: left 1rem center;
-  margin-top: 0.25rem;
-  height: 40px;
-  border-radius: 4px;
-  width: 100%;
-  background-color: $primarycolor-2;
-  color: $primarycolor-4;
-  border: 2px solid $primarycolor-2;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 0.63rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-  line-height: 1.25rem;
-  &:hover {
-    border-color: $secondarycolor-2;
-    background-color: $secondarycolor-2;
-    color: $primarycolor-4;
-  }}
-
-
-&__button--cancel{
-  background-repeat: no-repeat;
-  background-position: left 1rem center;
-  margin-top: 0.25rem;
-  height: 40px;
-  border-radius: 4px;
-  width: 100%;
-  background-color: $primarycolor-4;
-  color: $primarycolor-2;
-  border: 2px solid $primarycolor-4;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  font-size: 0.63rem;
-  font-weight: 700;
-  margin-bottom: 0.25rem;
-  line-height: 1.25rem;
-  
-  
-}
-
-}
-
