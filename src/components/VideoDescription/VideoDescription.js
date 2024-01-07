@@ -4,15 +4,13 @@ import likes from "../../assets/images/likes.svg";
 
 const VideoDescription = ({ video }) => {
 
-  
   const date = video.timestamp;
   const dateFormat = new Date(date);
-  const formattedMonth = (dateFormat.getMonth() + 1)
-    .toString()
-    .padStart(2, "0");
-  const formattedDay = dateFormat.getDate().toString().padStart(2, "0");
-  const formattedYear = dateFormat.getFullYear();
-  const formattedDate = `${formattedMonth}/${formattedDay}/${formattedYear}`;
+  const formattedDate = dateFormat.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  });
   return (
     <section className="videoinfo">
       <h1 className="videoinfo__title">{video.title}</h1>

@@ -6,13 +6,12 @@ const VideoComments = ({ video }) => {
     <section className="comment">
       {video.comments.map((comment) => {
       
-        const dateFormat = new Date(comment.timestamp);
-        const formattedMonth = (dateFormat.getMonth() + 1)
-          .toString()
-          .padStart(2, "0");
-        const formattedDay = dateFormat.getDate().toString().padStart(2, "0");
-        const formattedYear = dateFormat.getFullYear();
-        const formattedDate = `${formattedMonth}/${formattedDay}/${formattedYear}`;
+      const dateFormat = new Date(comment.timestamp);
+        const formattedDate = dateFormat.toLocaleDateString('en-US', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+        });
 
         return (
           <article key={comment.id} className="comment__section">
