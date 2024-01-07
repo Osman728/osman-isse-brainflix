@@ -2,8 +2,10 @@ import "./VideoDescription.scss";
 import views from "../../assets/images/views.svg";
 import likes from "../../assets/images/likes.svg";
 
-const VideoDescription = ({ selectedVideo }) => {
-  const date = selectedVideo.timestamp;
+const VideoDescription = ({ video }) => {
+
+  
+  const date = video.timestamp;
   const dateFormat = new Date(date);
   const formattedMonth = (dateFormat.getMonth() + 1)
     .toString()
@@ -13,10 +15,10 @@ const VideoDescription = ({ selectedVideo }) => {
   const formattedDate = `${formattedMonth}/${formattedDay}/${formattedYear}`;
   return (
     <section className="videoinfo">
-      <h1 className="videoinfo__title">{selectedVideo.title}</h1>
+      <h1 className="videoinfo__title">{video.title}</h1>
       <div className="videoinfo__details">
         <div className="videoinfo__left-container">
-          <p className="videoinfo__author">By {selectedVideo.channel}</p>
+          <p className="videoinfo__author">By {video.channel}</p>
           <p className="videoinfo__date">{formattedDate}</p>
         </div>
 
@@ -27,7 +29,7 @@ const VideoDescription = ({ selectedVideo }) => {
               src={views}
               alt="Image views"
             />
-            <p className="videoinfo__views">{selectedVideo.views}</p>
+            <p className="videoinfo__views">{video.views}</p>
           </div>
 
           <div className="videoinfo__like-container">
@@ -36,11 +38,11 @@ const VideoDescription = ({ selectedVideo }) => {
               src={likes}
               alt="Image likes"
             />
-            <p className="videoinfo__likes">{selectedVideo.likes}</p>
+            <p className="videoinfo__likes">{video.likes}</p>
           </div>
         </div>
       </div>
-      <p className="videoinfo__description">{selectedVideo.description}</p>
+      <p className="videoinfo__description">{video.description}</p>
     </section>
   );
 };

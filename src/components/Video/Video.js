@@ -1,11 +1,11 @@
 import "./Video.scss";
 
-const Video = ({ selectedVideo }) => {
+const Video = ({ video }) => {
   return (
     <section className="video">
       <video
         className="video__player"
-        poster={selectedVideo.image}
+        poster={video.image}
         controls
       ></video>
     </section>

@@ -12,7 +12,8 @@ function App() {
       <Header />
       <Routes>
       <Route path="/" element={<MainPage/>}/>  
-      <Route path="Upload" element={<UploadPage/>}/>    
+      <Route path="video/:videoId" element={<MainPage />} />
+      <Route path="upload" element={<UploadPage/>}/>    
       </Routes>
       </BrowserRouter>
     </>

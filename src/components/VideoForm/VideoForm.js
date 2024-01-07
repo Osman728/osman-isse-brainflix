@@ -1,7 +1,7 @@
 import "./VideoForm.scss";
 
 import profilePicture from "../../assets/images/Mohan-muruge.jpg";
-const VideoForm = ({ selectedVideo }) => {
+const VideoForm = () => {
   return (
     <section className="conversation">
       <h2 className="conversation__title">3 Comments</h2>
