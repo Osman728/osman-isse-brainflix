@@ -76,9 +76,9 @@ const MainPage = () => {
           <VideoComments video={video} />
         </div>
         <aside className="related__videos">
-          <NextVideos
-            videos={videos.filter((v) => v.id !== (video?.id || ""))}
-          />
+        <NextVideos
+          videos={videos.filter((v) => v.id !== video?.id)}
+        />
         </aside>
       </main>
     </>
