@@ -5,9 +5,11 @@
 
 .comment {
   padding: 1.5rem 1rem 1rem 1rem;
+
   @include tablet {
     padding: 2.25rem 1.5rem 0 1.5rem;
   }
+
   &__section {
     gap: 1rem;
     display: flex;
@@ -15,6 +17,7 @@
     padding: 1.5rem 0 1rem 0;
     border-top: 0.5px solid $secondarycolor-3;
     border-bottom: 0.5px solid$secondarycolor-3;
+    
     @include desktop {
       padding-right: 1rem;
       width: 104%;
@@ -28,6 +31,7 @@
     width: 2.25rem;
     height: 2.25rem;
     background-color: $secondarycolor-3;
+
     @include tablet {
       object-fit: cover;
       border-radius: 50%;
@@ -35,6 +39,7 @@
       height: 2.5rem;
     }
   }
+
   &__container {
     display: flex;
     flex-direction: column;
@@ -53,31 +58,39 @@
     color: $primarycolor-1;
     font-size: 0.812rem;
     line-height: 1.125rem;
+
     @include tablet {
       font-size: 0.875rem;
       line-height: 1.375rem;
     }
   }
+
   &__info-date {
     color: $primarycolor-3;
     font-weight: 400;
     font-size: 0.812rem;
     line-height: 1.125rem;
+
     @include tablet {
       font-size: 0.875rem;
       line-height: 1.375rem;
     }
   }
+
   &__usertext {
     padding-top: 1rem;
+
     @include tablet {
       padding-top: 0.5rem;
     }
   }
+
   &__usertext-post {
     font-weight: 400;
     font-size: 0.812rem;
     line-height: 1.125rem;
+    color: $primarycolor-1;
+
     @include tablet {
       font-size: 0.875rem;
       line-height: 1.375rem;

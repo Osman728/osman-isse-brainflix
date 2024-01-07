@@ -10,9 +10,9 @@
     margin: 0 auto;
     max-width: 1020px;
   }
+}
 
-
-&__content {
+.column__content {
   @include desktop {
     flex: 1;
     display: flex;
@@ -21,9 +21,8 @@
     padding-bottom: 2.25rem;
   }
 }
-&__videos {
+.related__videos {
   @include desktop {
     width: 35%;
   }
-}
 }

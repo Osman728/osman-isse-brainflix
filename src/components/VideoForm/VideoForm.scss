@@ -9,6 +9,7 @@
     font-size: 0.812rem;
     line-height: 1.125rem;
     padding: 0 1rem 1rem 1rem;
+
     @include tablet {
       padding: 2.25rem 1.5rem 1.5rem 1.5rem;
       font-size: 0.875rem;
@@ -19,6 +20,7 @@
     display: flex;
     flex-direction: row;
     padding: 0 1rem;
+
     @include tablet {
       padding: 0 1.5rem;
     }
@@ -29,6 +31,7 @@
     border-radius: 50%;
     width: 2.25rem;
     height: 2.25rem;
+
     @include tablet {
       margin: 1.5rem 1rem 0 0;
       object-fit: cover;
@@ -37,18 +40,22 @@
       height: 2.5rem;
     }
   }
+
   &__form {
     width: 100%;
+
     @include tablet {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
   }
+
   &__comment {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     @include tablet {
       flex: 1;
       max-width: 70%;
@@ -61,10 +68,12 @@
     margin-bottom: 0.25rem;
     color: $primarycolor-3;
     line-height: 1.25rem;
+
     @include tablet {
       font-size: 0.75rem;
     }
   }
+
   &__comment-text {
     width: 100%;
     outline: none;
@@ -84,6 +93,7 @@
       font-size: 0.812rem;
       color: $primarycolor-1;
     }
+
     @include tablet {
       height: 2.45rem;
       width: 357%;
@@ -92,6 +102,7 @@
       line-height: 1.5714rem;
     }
   }
+
   &__comment-text {
     border: 1px solid $secondarycolor-3;
 
@@ -99,6 +110,7 @@
       border: 1px solid $secondarycolor-2;
     }
   }
+
   &__button {
     background-image: url(../../assets/images/add_comment.svg);
     background-repeat: no-repeat;
@@ -121,6 +133,7 @@
       background-color: $secondarycolor-2;
       color: $primarycolor-4;
     }
+    
     @include tablet {
       font-size: 0.75rem;
       margin: 0.5rem 0 0 0;

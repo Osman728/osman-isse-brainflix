@@ -3,19 +3,22 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/typograph" as *;
 
-.nextvideo {
+.next-video {
   display: flex;
   padding: 0rem 1rem 1rem 1rem;
   gap: 1rem;
+
   @include tablet {
     padding: 0 1.5rem 1.5rem 1.5rem;
   }
+
   &__header {
     padding: 0rem 1rem 1.5rem 1rem;
     font-size: 0.75rem;
     line-height: 1.25rem;
     font-weight: 700;
     color: $primarycolor-3;
+
     @include tablet {
       padding: 2.25rem 1.5rem 1.5rem 1.5rem;
       font-size: 0.75rem;
@@ -29,11 +32,16 @@
     line-height: 1.25rem;
     font-weight: 700;
     color: $primarycolor-3;
+
     @include tablet {
       padding: 0 1.5rem 1.5rem 1.5rem;
       font-size: 0.75rem;
       line-height: 1.25rem;
     }
+  }
+
+  &__link{
+    text-decoration: none;
   }
 
   &__image {
@@ -52,12 +60,15 @@
     font-weight: 700;
     color: $primarycolor-1;
     padding-bottom: 0.5rem;
+    text-decoration: none;
+    
     @include tablet {
       padding-bottom: 0.2rem;
       width: 64%;
       font-size: 0.875rem;
       line-height: 1.375rem;
     }
+
     @include desktop {
       width: 100%;
     }
@@ -68,6 +79,7 @@
     line-height: 1.125rem;
     font-weight: 400;
     color: $primarycolor-1;
+
     @include tablet {
       font-size: 0.875rem;
       line-height: 1.375rem;

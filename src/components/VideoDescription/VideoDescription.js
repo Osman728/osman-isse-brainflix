@@ -3,13 +3,12 @@ import views from "../../assets/images/views.svg";
 import likes from "../../assets/images/likes.svg";
 
 const VideoDescription = ({ video }) => {
-
   const date = video.timestamp;
   const dateFormat = new Date(date);
-  const formattedDate = dateFormat.toLocaleDateString('en-US', {
-    year: 'numeric',
-    month: '2-digit',
-    day: '2-digit',
+  const formattedDate = dateFormat.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
   });
   return (
     <section className="videoinfo">

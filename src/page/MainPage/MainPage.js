@@ -26,7 +26,7 @@ const MainPage = () => {
       } catch (error) {
         console.error("Error fetching videos:", error);
         setIsError(true);
-      } 
+      }
     };
 
     fetchVideos();
@@ -57,7 +57,7 @@ const MainPage = () => {
   if (!video) {
     return <main>Loading Selected Video...</main>;
   }
-  
+
   if (isError) {
     return <p>There's something wrong, contact support...</p>;
   }
@@ -69,13 +69,13 @@ const MainPage = () => {
   return (
     <>
       <Video video={video} />
-      <main className="columnContainer">
-        <div className="columnContent">
+      <main className="column__container">
+        <div className="column__content">
           <VideoDescription video={video} />
           <VideoForm video={video} />
           <VideoComments video={video} />
         </div>
-        <aside className="relatedVideos">
+        <aside className="related__videos">
           <NextVideos
             videos={videos.filter((v) => v.id !== (video?.id || ""))}
           />
