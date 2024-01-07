@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import brainFlixLogo from "../../assets/images/BrainFlix-logo.svg";
 import profilePicture from "../../assets/images/Mohan-muruge.jpg";
 import "./Header.scss";
@@ -5,7 +6,9 @@ import "./Header.scss";
 const Header = () => {
   return (
     <header className="header">
-      <img src={brainFlixLogo} className="header__logo" alt="Brain Flix Logo" />
+      <Link to="/" className="header__logo">
+        <img src={brainFlixLogo} alt="Brain Flix Logo" />
+      </Link>
       <div className="header__wrapper-tb">
         <div className="header__container">
           <input
@@ -19,11 +22,13 @@ const Header = () => {
             className="header__avatar"
           />
         </div>
-        <button className="header__button">Upload</button>
+        <Link to="/upload ">
+          <button className="header__button">Upload</button>
+        </Link>
         <img
           src={profilePicture}
           alt="Profile picture"
-          className="header__avatar-tb"
+          className="header__avater-tb"
         />
       </div>
     </header>
