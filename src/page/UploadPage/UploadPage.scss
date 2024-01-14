@@ -57,11 +57,15 @@
 
     @include tablet {
       display: block;
-      width: 50%;
+      width:100%;
       border-radius: 4px;
     }
   }
-
+  &__form-thumbnail-container {
+    @include tablet {
+      width:50%;
+    }
+  }
   &__container-label {
     font-size: 0.63rem;
     font-weight: 700;
@@ -79,6 +83,7 @@
     }
 
     @include desktop {
+      width: 100%;
       border-bottom: none;
       display: block;
     }
@@ -156,7 +161,7 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 0.63rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 0.25rem;
     line-height: 1.25rem;
 
@@ -191,13 +196,14 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     font-size: 0.63rem;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 0.25rem;
     line-height: 1.25rem;
   }
 
   &__content {
     @include desktop {
+      gap: 2rem;
       display: flex;
       align-items: center;
       border-bottom: 1px solid $secondarycolor-3;
